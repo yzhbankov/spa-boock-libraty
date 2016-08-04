@@ -3,8 +3,6 @@
  */
 define('views/library', ['jquery', 'backbone', 'underscore', 'models/book', 'collections/library', 'views/book'],
     function ($, Backbone, _, Book, Library, BookView, LibraryView) {
-
-        console.log("views library.js connected");
         LibraryView = Backbone.View.extend({
             el: '#books',
 

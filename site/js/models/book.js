@@ -3,7 +3,6 @@
  */
 define('models/book', ['backbone'],
     function (Backbone, Book) {
-        console.log("models book.js connected");
         Book = Backbone.Model.extend({
             defaults: {
                 coverImage: 'img/cover.png',

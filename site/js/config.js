@@ -4,14 +4,13 @@
 requirejs.config({
     baseUrl:'./js',
     paths:{
-        'jquery':'lib/node_modules/jquery/dist/jquery.min',
-        'underscore':'lib/node_modules/underscore/underscore-min',
-        'backbone':'lib/node_modules/backbone/backbone-min'
+        jquery:'lib/node_modules/jquery/dist/jquery.min',
+        underscore:'lib/node_modules/underscore/underscore-min',
+        backbone:'lib/node_modules/backbone/backbone-min'
     }
 });
 
 requirejs(['views/library'], function(LibraryView){
-console.log("config envoked");
     $(function () {
         new LibraryView();
     });

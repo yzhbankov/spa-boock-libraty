@@ -3,7 +3,6 @@
  */
 define('collections/library',['backbone', 'models/book'],
     function(Backbone, Book, Library) {
-        console.log("library.js connected");
          Library = Backbone.Collection.extend({
             model: Book,
             url: '/api/books'

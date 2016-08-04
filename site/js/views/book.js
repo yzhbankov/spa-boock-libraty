@@ -3,8 +3,6 @@
  */
 define('views/book', ['jquery', 'backbone', 'underscore'],
     function ($, Backbone, _, BookView) {
-        console.log("views book.js connected");
-
         BookView = Backbone.View.extend({
             events: {
                 'click .delete': 'deleteBook'
