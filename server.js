@@ -1,8 +1,8 @@
 /**
  * Created by Iaroslav Zhbankov on 26.07.2016.
  */
-var express = require('express');
-var bodyParser = require('body-parser');
+var express = require('./app/lib/node_modules/express/index.js');
+var bodyParser = require('./app/lib/node_modules/body-parser/index.js');
 var app = express();
 
 var books = [
