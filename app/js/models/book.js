@@ -10,7 +10,9 @@ define(function (require) {
             title: 'No title',
             author: 'Unknown',
             releaseDate: 'Unknown',
+            description: "None",
             keywords: 'None'
+
         }
     });
 });

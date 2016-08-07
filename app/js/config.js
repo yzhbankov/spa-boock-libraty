@@ -15,7 +15,7 @@ requirejs.config({
     }
 });
 
-requirejs(['views/library'], function (LibraryView) {
+requirejs(['views/Library'], function (LibraryView) {
 
     $(function () {
         new LibraryView();

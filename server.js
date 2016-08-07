@@ -9,17 +9,36 @@ var books = [
     {
         id: 1,
         title: "Developing Backbone.js Applications",
-        author: "Addy Osmani"
+        author: "Addy Osmani",
+        releaseDate:"May 2013",
+        description: "If you want to build your site is frontend with the" +
+        "single-page application (SPA) model, this hands-on book shows you" +
+        "how to get the job done with Backbone.js. You will learn how to create" +
+        "structured JavaScript applications, using Backbone is own flavor of" +
+        "model-view-controller (MVC) architecture.",
+        keywords:"Backbone, JavaScript, SPA"
     },
     {
         id: 2,
-        title: "JavaScript: The Definitive Guide, 5th Edition",
-        author: "David Flanagan"
+        title: "Web Development with MongoDB and NodeJS, 2nd Edition",
+        author: "Mithun Satheesh, Bruno Joseph D mello, Jason Krol",
+        releaseDate:"October 2015",
+        description:"Configure your development environment to use Node.js and MongoDB"+
+        "Use Node.js to connect to a MongoDB database and perform data manipulations"+
+        "A practical guide with clear instructions to design and develop a complete web...",
+        keywords:"MongoDB, NodeJS, guide"
     },
     {
         id: 3,
-        title: "Atlant",
-        author: "Ain Rand"
+        title: "MapReduce Design Patterns, 2nd Edition",
+        author: "Donald Miner, Adam Shook",
+        releaseDate:"October 2016",
+        description:"This handy guide brings together a unique collection of valuable" +
+        " MapReduce patterns that will save you time and effort regardless of the domain," +
+        " language, or development framework you are using. Updated to include new versions" +
+        " of Hadoop, this second edition features several new patterns, such as transformation, join with a...",
+        keywords:"edsign, programming, patterns, JavaScript"
+
     }
 ];
 
@@ -53,7 +72,7 @@ app.get('/api/books/:id', function(req, res) {
 });
 
 app.post('/api/books', function(req, res) {
-    if(!req.body.author || !req.body.title) {
+    if(!req.body.author || !req.body.title || !req.body.releaseDate || !req.body.keywords || !req.body.description) {
         res.statusCode = 400;
         return res.json({ msg: "Invalid params sent" });
     }
@@ -61,6 +80,9 @@ app.post('/api/books', function(req, res) {
     var newBook = {
         author : req.body.author,
         title : req.body.title,
+        releaseDate : req.body.releaseDate,
+        description : req.body.description,
+        keywords : req.body.keywords,
         id: nextId++
     };
 
@@ -70,7 +92,7 @@ app.post('/api/books', function(req, res) {
 });
 
 app.put('/api/books/:id', function(req, res) {
-    if(!req.body.author || !req.body.title) {
+    if(!req.body.author || !req.body.title || !req.body.releaseDate || !req.body.keywords || !req.body.description) {
         res.statusCode = 400;
         return res.json({ msg: "Invalid params sent" });
     }
@@ -84,6 +106,9 @@ app.put('/api/books/:id', function(req, res) {
 
     book.author = req.body.author;
     book.title = req.body.title;
+    book.releaseDate = req.body.releaseDate;
+    book.keywords = req.body.keywords;
+    book.description = req.body.description;
 
     res.json(book);
 });
