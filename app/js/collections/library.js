@@ -3,7 +3,7 @@
  */
 define(function (require) {
     var Backbone = require('backbone');
-    var Book = require('models/Book');
+    var Book = require('models/book');
 
     return Backbone.Collection.extend({
         model: Book,

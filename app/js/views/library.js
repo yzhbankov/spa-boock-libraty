@@ -2,7 +2,7 @@
  * Created by Iaroslav Zhbankov on 25.07.2016.
  */
 define(function (require) {
-    var $ = require('jqurey');
+    var $ = require('jquery');
     var Backbone = require('backbone');
     var _ = require('underscore');
     var Book = require('models/book');

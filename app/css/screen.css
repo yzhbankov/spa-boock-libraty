@@ -47,8 +47,8 @@ body {
 }
 #addBook label {
     width: 100px;
-    margin-right: 10px;
-    text-align: right;
+    margin: auto;
+    text-align: left;
     line-height: 25px;
 }
 
@@ -58,9 +58,7 @@ body {
     float: left;
 }
 
-#addBook label[for="title"], #addBook label[for="releaseDate"] {
-    clear: both;
-}
+
 
 #addBook button {
     display: block;
