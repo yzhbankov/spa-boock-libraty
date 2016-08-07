@@ -25,7 +25,7 @@ var books = [
 
 var nextId = 4;
 
-app.use(express.static(__dirname + '/site'));
+app.use(express.static(__dirname + '/app'));
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
     if(req.url.indexOf("/api") === 0 ||
@@ -34,7 +34,7 @@ app.use(function (req, res, next) {
         return next();
     }
 
-    res.sendFile(__dirname + '/site/index.html');
+    res.sendFile(__dirname + '/app/index.html');
 });
 
 app.get('/api/books', function(req, res) {
