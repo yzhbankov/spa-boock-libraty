@@ -6,12 +6,8 @@ requirejs.config({
     paths: {
         jquery: '/lib/node_modules/jquery/dist/jquery.min',
         underscore: '/lib/node_modules/underscore/underscore-min',
-        backbone: '/lib/node_modules/backbone/backbone-min'
-    },
-    shim: {
-        'jquery': {
-            exports: '$'
-        }
+        backbone: '/lib/node_modules/backbone/backbone-min',
+        text:'/lib/node_modules/text/text'
     }
 });
 

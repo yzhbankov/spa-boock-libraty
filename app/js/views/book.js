@@ -5,6 +5,7 @@ define(function (require) {
     var $ = require('jquery');
     var Backbone = require('backbone');
     var _ = require('underscore');
+    var bookDetailsTemplate = require('text!views/template/bookDetailsTemplate.html');
 
     return Backbone.View.extend({
         events: {
@@ -20,7 +21,7 @@ define(function (require) {
         },
         tagName: 'div',
         className: 'bookContainer',
-        template: _.template($('#bookTemplate').html()),
+        template: _.template(bookDetailsTemplate),
 
         render: function () {
             //this.el is what we defined in tagName. use $el to get access to jQuery html() function

@@ -32,20 +32,6 @@
     </form>
 </div>
 
-<script id="bookTemplate" type="text/template">
-    <img src="<%= coverImage %>"/>
-    <ul>
-        <li><span class="headers">Title: </span> <%= title %></li>
-        <li><span class="headers">Author: </span><%= author %></li>
-        <li><span class="headers">Release date: </span><%= releaseDate %></li>
-        <li><span class="headers">Description: </span><%= description %></li>
-        <li><span class="headers">Keywords: </span><%= keywords %></li>
-    </ul>
-    <div class="buttons">
-        <button class="delete">Delete</button>
-        <button class="details">Details</button>
-    </div>
-</script>
-<script data-main="js/config" src="lib/requirejs.js"></script>
+<script data-main="js/config" src="lib/node_modules/requirejs/require.js"></script>
 </body>
 </html>
