@@ -5,11 +5,14 @@ define(function (require) {
     var $ = require('jquery');
     var Backbone = require('backbone');
     var _ = require('underscore');
+    var bookViewTemplate = require('text!views/template/bookViewTemplate.html');
     var bookDetailsTemplate = require('text!views/template/bookDetailsTemplate.html');
+
 
     return Backbone.View.extend({
         events: {
-            'click .delete': 'deleteBook'
+            'click .delete': 'deleteBook',
+            'click .details': 'details'
         },
 
         deleteBook: function () {
@@ -19,9 +22,13 @@ define(function (require) {
             //Delete view
             this.remove();
         },
+
+        details: function(){
+            alert('hahahahahhahahahaha');
+        },
         tagName: 'div',
         className: 'bookContainer',
-        template: _.template(bookDetailsTemplate),
+        template: _.template(bookViewTemplate),
 
         render: function () {
             //this.el is what we defined in tagName. use $el to get access to jQuery html() function

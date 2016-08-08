@@ -11,10 +11,10 @@ requirejs.config({
     }
 });
 
-requirejs(['views/Library'], function (LibraryView) {
+requirejs(['router/router', 'backbone'], function (Router, Backbone) {
 
-    $(function () {
-        new LibraryView();
-    });
+    var router = new Router();
+    Backbone.history.start();
+
 
 });
