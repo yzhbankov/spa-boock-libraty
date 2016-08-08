@@ -22,10 +22,11 @@ define(function (require) {
             //Delete view
             this.remove();
         },
-
         details: function(){
-            alert('hahahahahhahahahaha');
+            alert('1');
+            return true;
         },
+
         tagName: 'div',
         className: 'bookContainer',
         template: _.template(bookViewTemplate),

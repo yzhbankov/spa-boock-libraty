@@ -6,6 +6,7 @@ define(function(require) {
     var Backbone = require('backbone');
     var LibraryView = require('views/Library');
     var BookView = require('views/book');
+    var Book = require('models/book');
     var $ = require('jquery');
 
     return Backbone.Router.extend({
@@ -21,7 +22,9 @@ define(function(require) {
         },
         bookView: function(){
             $(function () {
-                new BookView();
+                var book = new Book();
+                var bookView = new BookView({el:"#books", model: book});
+                bookView.render();
             });
         }
     });
