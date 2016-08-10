@@ -32,8 +32,8 @@ define(function (require) {
 
 
         initialize: function () {                    // UPDATED
-            this.collection = new Library();    // UPDATED
-            this.collection.fetch({reset: true});   // NEW
+            //this.collection = new Library();    // UPDATED
+            //this.collection.fetch({reset: true});   // NEW
             this.render();
 
             this.listenTo(this.collection, 'add', this.renderBook);
