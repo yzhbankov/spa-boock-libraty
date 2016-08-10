@@ -2,7 +2,7 @@
  * Created by Iaroslav Zhbankov on 08.08.2016.
  */
 
-define(function(require) {
+define(function (require) {
     var Backbone = require('backbone');
     var LibraryView = require('views/Library');
     var Library = require('collections/library');
@@ -11,26 +11,25 @@ define(function(require) {
     var $ = require('jquery');
 
     return Backbone.Router.extend({
-        initialize: function(){
+        initialize: function () {
             this.library = new Library();
             this.library.fetch({reset: true});
-
-        console.log(this.library.length);
-
         },
         routes: {
             "": "libraryView",
             "library": "libraryView",
-            "book": "bookView"
+            "book/:id": "bookView"
 
         },
         libraryView: function () {
-                new LibraryView({collection: this.library});
+            new LibraryView({collection: this.library});
+            this.library.each(function(item){console.log(item)});
+
         },
-        bookView: function(){
-                var book = new Book();
-                var bookView = new DetailedBookView({el:"#books", model: book});
-                bookView.render();
+        bookView: function (id) {
+            var book = new Book();
+            var bookView = new DetailedBookView({el: "#books", model: this.library.at(id)});
+            bookView.render();
         }
     });
 });
