@@ -6,6 +6,7 @@ define(function(require) {
     var Backbone = require('backbone');
     var LibraryView = require('views/Library');
     var BookView = require('views/book');
+    var DetailedBookView = require('views/detailedBook');
     var Book = require('models/book');
     var $ = require('jquery');
 
@@ -23,7 +24,7 @@ define(function(require) {
         bookView: function(){
             $(function () {
                 var book = new Book();
-                var bookView = new BookView({el:"#books", model: book});
+                var bookView = new DetailedBookView({el:"#books", model: book});
                 bookView.render();
             });
         }

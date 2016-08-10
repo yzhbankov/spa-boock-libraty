@@ -23,8 +23,7 @@ define(function (require) {
             this.remove();
         },
         details: function(){
-            alert('1');
-            return true;
+            return this.model;
         },
 
         tagName: 'div',
