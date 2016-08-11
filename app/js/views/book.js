@@ -11,8 +11,7 @@ define(function (require) {
 
     return Backbone.View.extend({
         events: {
-            'click .delete': 'deleteBook',
-            'click .details': 'details'
+            'click .delete': 'deleteBook'
         },
 
         deleteBook: function () {
@@ -21,9 +20,6 @@ define(function (require) {
 
             //Delete view
             this.remove();
-        },
-        details: function(){
-            return this.model;
         },
 
         tagName: 'div',

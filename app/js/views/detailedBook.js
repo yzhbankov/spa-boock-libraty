@@ -10,7 +10,13 @@ define(function (require) {
     var bookDetailsTemplate = require('text!views/template/bookDetailsTemplate.html');
 
     return BookView.extend({
-
+        events: {
+            'click .details': 'details'
+        },
+        details: function () {
+            //Delete view
+            this.remove();
+        },
         template: _.template(bookDetailsTemplate)
     });
 

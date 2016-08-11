@@ -24,6 +24,7 @@ define(function (require) {
         libraryView: function () {
             new LibraryView({collection: this.library});
             this.library.each(function(item){console.log(item)});
+            this.render();
 
         },
         bookView: function (id) {
