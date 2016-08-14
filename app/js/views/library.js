@@ -10,7 +10,7 @@ define(function (require) {
     var BookView = require('views/book');
 
     return Backbone.View.extend({
-        el: '#books',
+
 
         events: {
             'click #add': 'addBook'
@@ -34,10 +34,10 @@ define(function (require) {
         initialize: function () {                    // UPDATED
             //this.collection = new Library();    // UPDATED
             //this.collection.fetch({reset: true});   // NEW
-            this.render();
-
             this.listenTo(this.collection, 'add', this.renderBook);
             this.listenTo(this.collection, 'reset', this.render); // NEW
+            this.render();
+
         },
 
         // render library by rendering each book in its collection
@@ -45,6 +45,7 @@ define(function (require) {
             this.collection.each(function (item) {
                 this.renderBook(item);
             }, this);
+
         },
 
         // render a book by creating a BookView and appending the
@@ -54,6 +55,12 @@ define(function (require) {
                 model: item
             });
             this.$el.append(bookView.render().el);
+        },
+        hide: function(){
+            this.$el.hide();
+        },
+        show: function(){
+            this.$el.show();
         }
     });
 });

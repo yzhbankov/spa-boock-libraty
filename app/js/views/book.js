@@ -21,9 +21,6 @@ define(function (require) {
             //Delete view
             this.remove();
         },
-
-        tagName: 'div',
-        className: 'bookContainer',
         template: _.template(bookViewTemplate),
 
         render: function () {
@@ -32,6 +29,7 @@ define(function (require) {
 
             return this;
         }
+
     });
 
 });

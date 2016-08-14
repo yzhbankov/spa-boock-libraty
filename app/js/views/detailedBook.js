@@ -7,17 +7,25 @@
 define(function (require) {
     var BookView = require('views/book');
     var _ = require('underscore');
+    var $ = require('jquery');
     var bookDetailsTemplate = require('text!views/template/bookDetailsTemplate.html');
 
     return BookView.extend({
-        events: {
-            'click .details': 'details'
+        initialize: function () {
+            this.listenTo(this.model, 'changed', console.log(this.model));
+            this.listenTo(this.model, 'reset', console.log(this.model)); // NEW
+
+            this.render();
         },
-        details: function () {
-            //Delete view
-            this.remove();
+        template: _.template(bookDetailsTemplate),
+        hide: function () {
+            this.$el.hide();
+            //this.remove();
         },
-        template: _.template(bookDetailsTemplate)
+        show: function () {
+            this.$el.show();
+        }
+
     });
 
 });
