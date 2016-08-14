@@ -5,6 +5,7 @@ define(function (require) {
     var Backbone = require('backbone');
 
     return Backbone.Model.extend({
+        url: '/api/books/',
         defaults: {
             coverImage: 'img/cover.png',
             title: 'No title',

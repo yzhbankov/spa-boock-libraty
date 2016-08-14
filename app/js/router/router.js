@@ -37,36 +37,24 @@ define(function (require) {
         },
 
         goToBookDetails: function (id) {
+
             var bookModel = this.library.at(id);
 
             if (this.libraryView) {
                 this.libraryView.hide();
             }
 
-            if (!this.bookView){
+            if (!this.bookView) {
                 this.bookView = new DetailedBookView({
                     model: bookModel
                 });
                 this.bookView.$el.appendTo(".bookDetailsContainer");
-            } else{
-                this.bookView.model.set(bookModel.attributes);
-                this.bookView.show();
-            }
-            //this.bookView.render();
-
-            /*
-            var bookModel = this.library.at(id);
-
-            if (this.bookView.el == undefined) {
-                console.log('Creation of book View');
-                this.bookView = new DetailedBookView({
-                    el: "#detailedBookContainer",
-                    model: bookModel
-                });
             } else {
-                console.log('Set attributes to model');
-                this.bookView.model.set(bookModel.attributes);
-            }*/
+                this.bookView.model = bookModel; //Õ≈Œ∆»ƒ¿ÕÕŒ!!!!!!     when set(attributes) the collection replace first element
+                this.bookView.show();
+                this.bookView.render();
+            }
+
         }
     });
 });

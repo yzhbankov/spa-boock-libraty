@@ -42,6 +42,11 @@ body {
     margin: 5px;
 }
 
+.libraryContainer{
+    background-color: white;
+
+}
+
 #books {
     background-color: white;
 }
