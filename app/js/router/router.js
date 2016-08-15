@@ -7,6 +7,7 @@ define(function (require) {
     var LibraryView = require('views/Library');
     var Library = require('collections/library');
     var DetailedBookView = require('views/detailedBook');
+    var AddNewBookView = require('views/addNewBook');
     var Book = require('models/book');
     var $ = require('jquery');
 
@@ -18,7 +19,8 @@ define(function (require) {
         routes: {
             "": "goToLibrary",
             "library": "goToLibrary",
-            "book/:id": "goToBookDetails"
+            "book/:id": "goToBookDetails",
+            "add": "addNewBook"
 
         },
         goToLibrary: function () {
@@ -37,8 +39,13 @@ define(function (require) {
         },
 
         goToBookDetails: function (id) {
-
             var bookModel = this.library.at(id);
+
+            if (!bookModel) {
+                var currentId = Number(id) + 1;
+                bookModel = new Book({id: currentId});
+                bookModel.fetch();
+            }
 
             if (this.libraryView) {
                 this.libraryView.hide();
@@ -54,6 +61,20 @@ define(function (require) {
                 this.bookView.show();
                 this.bookView.render();
             }
+
+        },
+
+        addNewBook: function () {
+            if (this.libraryView) {
+                this.libraryView.hide();
+            }
+            if (this.bookView) {
+                this.bookView.hide();
+            }
+
+            this.addNewBookView = new AddNewBookView({});
+            this.addNewBookView.render();
+            this.addNewBookView.$el.appendTo(".addNewBookContainer");
 
         }
     });

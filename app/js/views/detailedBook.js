@@ -12,8 +12,6 @@ define(function (require) {
 
     return BookView.extend({
         initialize: function () {
-            this.listenTo(this.model, 'change', console.log("Change modele attributes event " + this.model.attributes));
-         //   this.listenTo(this.model, 'route', console.log("Change model router " + this.model.attributes)); // NEW
 
             this.render();
         },
