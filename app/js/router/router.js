@@ -34,6 +34,9 @@ define(function (require) {
             if (this.bookView) {
                 this.bookView.hide();
             }
+            if (this.addNewBookView) {
+                this.addNewBookView.hide();
+            }
 
 
         },
@@ -65,6 +68,7 @@ define(function (require) {
         },
 
         addNewBook: function () {
+
             if (this.libraryView) {
                 this.libraryView.hide();
             }
@@ -72,9 +76,13 @@ define(function (require) {
                 this.bookView.hide();
             }
 
-            this.addNewBookView = new AddNewBookView({});
-            this.addNewBookView.render();
-            this.addNewBookView.$el.appendTo(".addNewBookContainer");
+            if (!this.addNewBookView) {
+                this.addNewBookView = new AddNewBookView({collection: this.library});
+                this.addNewBookView.render();
+                this.addNewBookView.$el.appendTo(".addNewBookContainer");
+            } else {
+                this.addNewBookView.show();
+            }
 
         }
     });

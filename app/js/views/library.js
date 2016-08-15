@@ -11,26 +11,6 @@ define(function (require) {
 
     return Backbone.View.extend({
 
-
-        events: {
-            'click #add': 'addBook'
-        },
-
-        addBook: function (e) {
-            e.preventDefault();
-
-            var formData = {};
-
-            $('#addBook div').children('input').each(function (i, el) {
-                if ($(el).val() !== '') {
-                    formData[el.id] = $(el).val();
-                }
-            });
-
-            this.collection.add(new Book(formData));
-        },
-
-
         initialize: function () {                    // UPDATED
             //this.collection = new Library();    // UPDATED
             //this.collection.fetch({reset: true});   // NEW

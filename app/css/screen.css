@@ -9,6 +9,16 @@ body {
 .headers {
     font-weight: bold;
 }
+.add {
+    width: 100px;
+    position: relative;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.backToLibrary{
+float:right
+}
 
 .bookContainer {
     position:relative;
