@@ -13,6 +13,8 @@ define(function (require) {
         events: {
             'click .delete': 'deleteBook'
         },
+        tagName: "div",
+        className: "book",
 
         deleteBook: function () {
             //Delete model

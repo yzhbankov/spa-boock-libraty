@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Backbone.js Library</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/screen.css">
 </head>
 <body>
-<h1 class="page_title">Backbone Book Library</h1>
-
-<a href="/#add"><button class="add">Add new book</button></a>
-
+<div class="headBlock">
+    <div>Free open source library</div>
+    <div>Join us!</div>
+</div>
+<h2 class="page_title">Backbone Book Library</h2>
+<div class="row">
+    <div class="col-md-2">
+<a href="/#add">
+    <button class="add">Add new book</button>
+</a></div>
+    <div class="col-md-6"></div>
+    <div class="col-md-4">
+        <button>List View</button>
+        <button>Matrix View</button>
+        </div>
+</div>
 <!--<div id="books">
     <form id="addBook" action="#">
         <div>
@@ -35,7 +48,7 @@
 </div>-->
 
 <div class="addNewBookContainer"></div>
-<div class="libraryContainer"></div>
+<div class="libraryContainer row"></div>
 <div class="bookDetailsContainer"></div>
 
 <script data-main="js/config" src="lib/node_modules/requirejs/require.js"></script>

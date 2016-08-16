@@ -15,6 +15,7 @@ define(function (require) {
 
             this.render();
         },
+        className: "detailedBook",
         template: _.template(bookDetailsTemplate),
         hide: function () {
             this.$el.hide();
