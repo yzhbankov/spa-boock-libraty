@@ -65,7 +65,9 @@ bottom:0px;
     margin: 5px;
     float:left;
 }
-
+.detailedBook img {
+    margin: 5px
+}
 
 .book img {
     margin: 5px

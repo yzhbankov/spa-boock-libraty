@@ -24,10 +24,15 @@ define(function (require) {
 
         },
         goToLibrary: function () {
+            var libraryLength = this.library.length;
+            this.library.fetch();
             if (!this.libraryView) {
                 this.libraryView = new LibraryView({collection: this.library});
                 this.libraryView.$el.appendTo(".libraryContainer");
                 this.library.reset();
+            } else if (libraryLength < this.library.length) {
+                this.libraryView = new LibraryView({collection: this.library});
+                this.libraryView.$el.appendTo(".libraryContainer");
             } else {
                 this.libraryView.show();
             }

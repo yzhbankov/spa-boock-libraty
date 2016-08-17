@@ -27,10 +27,10 @@ define(function (require) {
                 }
             });
             var newBook = new Book(formData);
-            var bookID = this.collection.length + 1;
-            newBook.set({"id": bookID});
+            //var bookID = this.collection.length + 1;
+            newBook.save();
 
-            this.collection.add(newBook);
+
 
 
             /*addBook: function (e) {
