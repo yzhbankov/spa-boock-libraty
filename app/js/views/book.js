@@ -14,7 +14,7 @@ define(function (require) {
             'click .delete': 'deleteBook'
         },
         tagName: "div",
-        className: "book",
+        className: "matrixBook",
 
         deleteBook: function () {
             //Delete model
@@ -26,7 +26,7 @@ define(function (require) {
         template: _.template(bookViewTemplate),
 
         render: function () {
-            //this.el is what we defined in tagName. use $el to get access to jQuery html() function
+
             this.$el.html(this.template(this.model.attributes));
 
             return this;

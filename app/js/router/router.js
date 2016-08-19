@@ -15,6 +15,7 @@ define(function (require) {
         initialize: function () {
             this.library = new Library();
             this.library.fetch();
+            this.switch = true;
         },
         routes: {
             "": "goToLibrary",
@@ -24,6 +25,17 @@ define(function (require) {
 
         },
         goToLibrary: function () {
+            var same = this;
+            $("#matrix").on("click", function () {
+                $("#list").prop("checked", false);
+                $(".matrixBook").removeClass("listBook");
+
+            });
+            $("#list").on("click", function () {
+                $("#matrix").prop("checked", false);
+                $(".matrixBook").addClass("listBook");
+            });
+
             var libraryLength = this.library.length;
             this.library.fetch();
             if (!this.libraryView) {

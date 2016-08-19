@@ -5,19 +5,14 @@ define(function (require) {
     var $ = require('jquery');
     var Backbone = require('backbone');
     var _ = require('underscore');
-    var Book = require('models/book');
-    var Library = require('collections/library');
     var BookView = require('views/book');
 
     return Backbone.View.extend({
 
         initialize: function () {                    // UPDATED
-            //this.collection = new Library();    // UPDATED
-            //this.collection.fetch({reset: true});   // NEW
+
             this.listenTo(this.collection, 'add', this.renderBook);
             this.listenTo(this.collection, 'reset', this.render); // NEW
-            this.render();
-
         },
 
         // render library by rendering each book in its collection
@@ -31,15 +26,16 @@ define(function (require) {
         // render a book by creating a BookView and appending the
         // element it renders to the library's element
         renderBook: function (item) {
+
             var bookView = new BookView({
                 model: item
             });
             this.$el.append(bookView.render().el);
         },
-        hide: function(){
+        hide: function () {
             this.$el.hide();
         },
-        show: function(){
+        show: function () {
             this.$el.show();
         }
     });

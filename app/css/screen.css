@@ -45,12 +45,23 @@ bottom:0px;
 
 }
 
-.book{
+.matrixBook{
     background-color: ghostwhite;
     border: solid 1px;
     border-color: lightgrey;
     border-radius: 5px;
     width: 47%;
+    height: 220px;
+    margin: 5px;
+    float:left;
+}
+
+.listBook{
+    background-color: ghostwhite;
+    border: solid 1px;
+    border-color: lightgrey;
+    border-radius: 5px;
+    width: 95%;
     height: 220px;
     margin: 5px;
     float:left;
@@ -69,7 +80,11 @@ bottom:0px;
     margin: 5px
 }
 
-.book img {
+.matrixBook img {
+    margin: 5px
+}
+
+.listBook img {
     margin: 5px
 }
 /*.bookContainer {
