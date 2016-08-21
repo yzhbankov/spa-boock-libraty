@@ -1,10 +1,12 @@
 body {
     margin: 40px 25% 6px 25%;
-    background-color:white;
+color: white;
+
 }
-.headBlock{
+
+.headBlock {
     background-color: black;
-    color:white;
+    color: white;
     position: fixed;
     top: 0;
     left: 0;
@@ -14,13 +16,28 @@ body {
 
 }
 
+.footBlock {
+    opacity: 0.8;
+    background-color: gray;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
+
 .page_title {
     margin: 20px;
     text-align: center;
+    color: white;
 }
+
 .headers {
     font-weight: bold;
 }
+
 .add {
     width: 150px;
     position: relative;
@@ -29,53 +46,57 @@ body {
     margin-bottom: 10px;
 }
 
-.backToLibrary{
-float:right
+.backToLibrary {
+    float: right
 }
 
-.buttons .delete{
-position: relative;
+.buttons .delete {
+    position: relative;
     float: right;
-bottom:0px;
+    bottom: 0px;
 
 }
+
 .buttons .details {
     float: left;
-
-
 }
 
-.matrixBook{
-    background-color: ghostwhite;
+.matrixBook {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
     border: solid 1px;
     border-color: lightgrey;
     border-radius: 5px;
-    width: 47%;
+    width: 50%;
     height: 220px;
-    margin: 5px;
-    float:left;
+    margin-left: auto;
+    float: left;
 }
 
-.listBook{
-    background-color: ghostwhite;
+.listBook {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
     border: solid 1px;
     border-color: lightgrey;
     border-radius: 5px;
-    width: 95%;
+    width: 100%;
     height: 220px;
-    margin: 5px;
-    float:left;
+    margin-left: auto;
+    float: left;
 }
 
-.detailedBook{
-    background-color: ghostwhite;
+.detailedBook {
+
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
     border: solid 1px;
     border-color: lightgrey;
     border-radius: 5px;
     width: 90%;
     margin: 5px;
-    float:left;
+    float: left;
 }
+
 .detailedBook img {
     margin: 5px
 }
@@ -89,17 +110,19 @@ bottom:0px;
 }
 
 .delete {
+
     padding-top: 5px;
     padding-right: 25px;
     font-size: 20px;
     font-weight: bold;
     line-height: 18px;
-    color: #000000;
+    color: white;
     text-shadow: 0 1px 0 #ffffff;
-    opacity: 0.2;
+    opacity: 0.8;
     filter: alpha(opacity=20);
     text-decoration: none;
 }
+
 .delete:hover {
     color: #000000;
     text-decoration: none;
@@ -140,8 +163,10 @@ bottom:0px;
     margin: 5px;
 }*/
 
-.libraryContainer{
-    background-color: white;
+.libraryContainer {
+
+    background: rgba(0, 0, 0, 0.1);
+
 }
 
 /*#books {
@@ -160,8 +185,6 @@ bottom:0px;
     margin-bottom: 10px;
     float: left;
 }
-
-
 
 #addBook button {
     display: block;
@@ -183,3 +206,10 @@ bottom:0px;
     font-size: 0;
     line-height: 0;
 }
+#switchers{
+    color: white;
+}
+
+a:link {font-size:16px; color: white}
+a:visited {font-size:16px; color: white}
+a:hover {font-size:16px; color:ghostwhite}
