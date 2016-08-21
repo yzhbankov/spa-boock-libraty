@@ -1,7 +1,6 @@
 body {
     margin: 40px 25% 6px 25%;
-color: white;
-
+    color: white;
 }
 
 .headBlock {
@@ -44,10 +43,7 @@ color: white;
     left: 50%;
     margin-left: -50px;
     margin-bottom: 10px;
-}
-
-.backToLibrary {
-    float: right
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .buttons .delete {
@@ -86,19 +82,18 @@ color: white;
 }
 
 .detailedBook {
-
     background: rgba(0, 0, 0, 0.5);
     color: white;
     border: solid 1px;
     border-color: lightgrey;
     border-radius: 5px;
-    width: 90%;
-    margin: 5px;
+    width: 100%;
     float: left;
 }
 
 .detailedBook img {
-    margin: 5px
+    margin:0 10px 10px 10px;
+    float:left;
 }
 
 .matrixBook img {
@@ -131,71 +126,45 @@ color: white;
     cursor: pointer;
 }
 
-/*.bookContainer {
-    position:relative;
-    outline: 1px solid #aaa;
-    width: 25%;
-    background-color: #fff;
-    overflow: auto;
-    margin: auto;
-}
-
-.bookContainer img {
-    height: 100%;
-    float: left;
-    margin: 10px;
-}*/
-
-/*.bookContainer ul {
-    list-style-type: none;
-    margin-bottom: 40px;
-}
-
-.bookContainer .buttons {
-    width: 95%;
-    position: absolute;
-    bottom: 0;
-    margin: 10px;
-}
-
-.bookContainer button {
-    float: right;
-    margin: 5px;
-}*/
-
 .libraryContainer {
 
     background: rgba(0, 0, 0, 0.1);
 
 }
 
-/*#books {
-    background-color: white;
-}*/
-
-#addBook label {
-    width: 100px;
-    margin: auto;
-    text-align: left;
-    line-height: 25px;
+#books {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 5px;
+    width: 100%;
 }
 
-#addBook label, #addBook input {
-    display: block;
-    margin-bottom: 10px;
+.backToLibrary {
+    margin-left: 97%;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 18px;
+    color: white;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.8;
+    filter: alpha(opacity=20);
+    text-decoration: none;
+}
+
+#addBook label {
+    width: 200px;
+    padding-left: 100px;
     float: left;
 }
 
-#addBook button {
+#addBook input {
+    float: left;
+    background: rgba(0, 0, 0, 0);
+    width: 300px;
     display: block;
-    margin: 5px 20px 10px 10px;
-    float: right;
-    clear: both;
+    margin-bottom: 30px;
+    margin-left: 30px;
 }
-
-/*#addBook div {
-    width: 100%;
-}*/
 
 #addBook div:after {
     content: "";
@@ -206,10 +175,25 @@ color: white;
     font-size: 0;
     line-height: 0;
 }
-#switchers{
+.addNewBook{
+    width:70%;
+    margin-left: 15%;
+    margin-bottom: 20px;
+background: rgba(0, 0, 0, 0.7);
+}
+
+#switchers {
     color: white;
 }
 
-a:link {font-size:16px; color: white}
-a:visited {font-size:16px; color: white}
-a:hover {font-size:16px; color:ghostwhite}
+a:link {
+    color: lightgrey;
+}
+
+a:visited {
+    color: lightgrey;
+}
+
+a:hover {
+    color: ghostwhite;
+}

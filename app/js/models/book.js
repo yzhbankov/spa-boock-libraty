@@ -10,7 +10,7 @@ define(function (require) {
         },*/
         urlRoot: '/api/books',
         defaults: {
-            coverImage: 'img/cover.png',
+            coverImage: 'img/book-title.jpg',
             title: 'No title',
             author: 'Unknown',
             releaseDate: 'Unknown',
