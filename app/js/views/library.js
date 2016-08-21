@@ -10,7 +10,15 @@ define(function (require) {
     return Backbone.View.extend({
 
         initialize: function () {                    // UPDATED
+            $("#matrix").on("click", function () {
+                $("#list").prop("checked", false);
+                $(".matrixBook").removeClass("listBook");
 
+            });
+            $("#list").on("click", function () {
+                $("#matrix").prop("checked", false);
+                $(".matrixBook").addClass("listBook");
+            });
             this.listenTo(this.collection, 'add', this.renderBook);
             this.listenTo(this.collection, 'reset', this.render); // NEW
         },
