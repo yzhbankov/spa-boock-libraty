@@ -6,7 +6,7 @@
         <div class="row">
             <div style="margin: 10px 15px 0px 0px">
                 <ul>
-                    <li><span class="headers">Title: </span> <%= title %></li>
+                    <li><span class="headers">Title: </span> <a href="/#book/<%= id - 1 %>"><%= title %></a></li>
                     <li><span class="headers">Author: </span><%= author %></li>
                     <li><span class="headers">Release date: </span><%= releaseDate %></li>
                     <!--<li><span class="headers">Description: </span><%= description %></li>-->
@@ -16,10 +16,6 @@
         </div>
         <div class="buttons">
             <button class="delete">Delete</button>
-            <a href="/#book/<%= id - 1 %>">
-                <button class="details">Details</button>
-            </a>
-
         </div>
     </div>
 </div>
