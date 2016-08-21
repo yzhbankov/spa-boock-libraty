@@ -87,6 +87,27 @@ bottom:0px;
 .listBook img {
     margin: 5px
 }
+
+.delete {
+    padding-top: 5px;
+    padding-right: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    text-decoration: none;
+}
+.delete:hover {
+    color: #000000;
+    text-decoration: none;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    cursor: pointer;
+}
+
 /*.bookContainer {
     position:relative;
     outline: 1px solid #aaa;
