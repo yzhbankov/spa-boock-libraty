@@ -18,11 +18,51 @@ define(function (require) {
         className: "detailedBook",
         template: _.template(bookDetailsTemplate),
         hide: function () {
-            this.$el.hide();
-            //this.remove();
+            var same = this;
+            var ticks = 0;
+            var clock = setInterval(function() {
+                ticks++;
+                same.$el.css("opacity",(0.1*(10-ticks)).toString());
+                if (ticks == 10) {
+                    clearInterval(clock);
+                    same.$el.hide();
+                }
+            }, 50);
         },
         show: function () {
-            this.$el.show();
+            var same = this;
+            var ticks = 0;
+            var clock = setInterval(function() {
+
+                ticks++;
+                if (ticks >= 10) {
+                    same.$el.show();
+                    same.$el.css("opacity",(0.1*(ticks-10)).toString());
+                }
+
+                if (ticks == 20) {
+                    clearInterval(clock);
+                }
+            }, 50);
+        },
+        render: function () {
+            var same = this;
+            var ticks = 0;
+            var clock = setInterval(function() {
+
+                ticks++;
+                if (ticks >= 10) {
+                    same.$el.html(same.template(same.model.attributes));
+                    same.$el.css("opacity",(0.1*(ticks-10)).toString());
+                }
+
+                if (ticks == 20) {
+                    clearInterval(clock);
+                }
+            }, 50);
+
+
+            return same;
         }
 
     });

@@ -39,13 +39,24 @@ define(function (require) {
                 model: item
             });
             this.$el.append(bookView.render().el);
+            this.$el.css("opacity", "0.1");
+            var same = this;
+            var ticks = 0;
+            var clock = setInterval(function () {
+                ticks++;
+                    same.$el.css("opacity", (0.1 * (ticks)).toString());
+                if (ticks == 10) {
+                    clearInterval(clock);
+                }
+            }, 50);
+
         },
         hide: function () {
             var same = this;
             var ticks = 0;
-            var clock = setInterval(function() {
+            var clock = setInterval(function () {
                 ticks++;
-                same.$el.css("opacity",(0.1*(10-ticks)).toString());
+                same.$el.css("opacity", (0.1 * (10 - ticks)).toString());
                 if (ticks == 10) {
                     clearInterval(clock);
                     same.$el.hide();
@@ -56,16 +67,18 @@ define(function (require) {
         show: function () {
             var same = this;
             var ticks = 0;
-            var clock = setInterval(function() {
-                same.$el.show();
+            var clock = setInterval(function () {
+
                 ticks++;
-                same.$el.css("opacity",(0.1*ticks).toString());
-                if (ticks == 10) {
+                if (ticks >= 10) {
+                    same.$el.show();
+                    same.$el.css("opacity", (0.1 * (ticks - 10)).toString());
+                }
+
+                if (ticks == 20) {
                     clearInterval(clock);
                 }
             }, 50);
-
-
         }
     });
 });
