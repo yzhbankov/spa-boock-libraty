@@ -41,10 +41,31 @@ define(function (require) {
             this.$el.append(bookView.render().el);
         },
         hide: function () {
-            this.$el.hide();
+            var same = this;
+            var ticks = 0;
+            var clock = setInterval(function() {
+                ticks++;
+                same.$el.css("opacity",(0.1*(10-ticks)).toString());
+                if (ticks == 10) {
+                    clearInterval(clock);
+                    same.$el.hide();
+                }
+            }, 50);
+
         },
         show: function () {
-            this.$el.show();
+            var same = this;
+            var ticks = 0;
+            var clock = setInterval(function() {
+                same.$el.show();
+                ticks++;
+                same.$el.css("opacity",(0.1*ticks).toString());
+                if (ticks == 10) {
+                    clearInterval(clock);
+                }
+            }, 50);
+
+
         }
     });
 });
