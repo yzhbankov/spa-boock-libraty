@@ -21,7 +21,16 @@ define(function (require) {
             this.model.destroy();
 
             //Delete view
-            this.remove();
+            var same = this;
+            var ticks = 0;
+            var clock = setInterval(function() {
+                ticks++;
+                same.$el.css("opacity",(0.1*(10-ticks)).toString());
+                if (ticks == 10) {
+                    clearInterval(clock);
+                    same.remove();
+                }
+            }, 50);
         },
         template: _.template(bookViewTemplate),
 

@@ -12,12 +12,31 @@ define(function (require) {
         initialize: function () {                    // UPDATED
             $("#matrix").on("click", function () {
                 $("#list").prop("checked", false);
-                $(".matrixBook").removeClass("listBook");
-
+                var ticks = 0;
+                var clock = setInterval(function () {
+                    ticks++;
+                    $(".matrixBook").css("opacity", (0.1 * (10-ticks)).toString());
+                    if (ticks == 10) {$(".matrixBook").removeClass("listBook");}
+                    if (ticks > 10) {$(".matrixBook").css("opacity", (0.1 * (ticks-10)).toString());}
+                    if (ticks == 20) {
+                        clearInterval(clock);
+                    }
+                }, 50);
             });
+
             $("#list").on("click", function () {
                 $("#matrix").prop("checked", false);
-                $(".matrixBook").addClass("listBook");
+                var ticks = 0;
+                var clock = setInterval(function () {
+                    ticks++;
+                    $(".matrixBook").css("opacity", (0.1 * (10-ticks)).toString());
+                    if (ticks == 10) {$(".matrixBook").addClass("listBook");}
+                    if (ticks > 10) {$(".matrixBook").css("opacity", (0.1 * (ticks-10)).toString());}
+                    if (ticks == 20) {
+                        clearInterval(clock);
+                    }
+                }, 50);
+
             });
             this.listenTo(this.collection, 'add', this.renderBook);
             this.listenTo(this.collection, 'reset', this.render); // NEW
