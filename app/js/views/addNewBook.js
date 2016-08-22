@@ -27,43 +27,53 @@ define(function (require) {
                 }
             });
             var newBook = new Book(formData);
-            //var bookID = this.collection.length + 1;
             newBook.save();
-
-
-
-
-            /*addBook: function (e) {
-             e.preventDefault();
-
-             var formData = {};
-
-             $('#addBook div').children('input').each(function (i, el) {
-             if ($(el).val() !== '') {
-             formData[el.id] = $(el).val();
-             }
-             });
-
-             this.collection.add(new Book(formData));
-             }*/
 
         },
 
         hide: function () {
-            this.$el.hide();
+            var same = this;
+            var ticks = 0;
+            var clock = setInterval(function () {
+                ticks++;
+                same.$el.css("opacity", (0.1 * (10 - ticks)).toString());
+                if (ticks == 10) {
+                    clearInterval(clock);
+                    same.$el.hide();
+                }
+            }, 50);
 
         },
         show: function () {
-            this.$el.show();
+            var same = this;
+            var ticks = 0;
+            var clock = setInterval(function () {
+                ticks++;
+                if (ticks >= 10) {
+                    same.$el.show();
+                    same.$el.css("opacity", (0.1 * (ticks - 10)).toString());
+                }
+                if (ticks == 20) {
+                    clearInterval(clock);
+                }
+            }, 50);
         },
 
         render: function () {
-
-            this.$el.html(this.template());
-
-            return this;
+            var same = this;
+            var ticks = 0;
+            var clock = setInterval(function () {
+                ticks++;
+                if (ticks >= 10) {
+                    same.$el.html(same.template());
+                    same.$el.css("opacity", (0.1 * (ticks - 10)).toString());
+                }
+                if (ticks == 20) {
+                    clearInterval(clock);
+                }
+            }, 50);
+            return same;
         }
-
     });
 
 });

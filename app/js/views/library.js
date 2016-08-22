@@ -68,13 +68,11 @@ define(function (require) {
             var same = this;
             var ticks = 0;
             var clock = setInterval(function () {
-
                 ticks++;
                 if (ticks >= 10) {
                     same.$el.show();
                     same.$el.css("opacity", (0.1 * (ticks - 10)).toString());
                 }
-
                 if (ticks == 20) {
                     clearInterval(clock);
                 }
