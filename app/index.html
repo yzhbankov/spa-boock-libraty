@@ -4,18 +4,20 @@
     <meta charset="UTF-8"/>
     <title>Backbone.js Library</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="css/screen.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css" media="handheld,screen and (max-device-width:480px)">
 </head>
 <body background="img/background.jpg">
 
 <h2 class="page_title">Backbone Open Source Library Project</h2>
 
-<div class="row">
-    <div class="col-md-2">
-        <a href="/#add"><button class="add">Add new book</button></a></div>
-    <div class="col-md-6"></div>
-    <div class="col-md-4">
-        <form class="switchers">
+<div>
+    <div>
+        <a href="/#add"><button class="add">Add new book</button></a>
+    </div>
+
+    <div class="switchers">
+        <form>
             <input type="radio" id="matrix" checked>Matrix view
             <input type="radio" id="list">List view
         </form>
