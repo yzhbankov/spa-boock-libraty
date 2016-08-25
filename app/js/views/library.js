@@ -10,28 +10,28 @@ define(function (require) {
     return Backbone.View.extend({
 
         initialize: function () {                    // UPDATED
-            $("#matrix").on("click", function () {
-                $("#list").prop("checked", false);
+            $(".js-matrix").on("click", function () {
+                $(".js-list").prop("checked", false);
                 var ticks = 0;
                 var clock = setInterval(function () {
                     ticks++;
-                    $(".matrixBook").css("opacity", (0.1 * (10-ticks)).toString());
-                    if (ticks == 10) {$(".matrixBook").removeClass("listBook");}
-                    if (ticks > 10) {$(".matrixBook").css("opacity", (0.1 * (ticks-10)).toString());}
+                    $(".matrix-book").css("opacity", (0.1 * (10-ticks)).toString());
+                    if (ticks == 10) {$(".matrix-book").removeClass("list-book");}
+                    if (ticks > 10) {$(".matrix-book").css("opacity", (0.1 * (ticks-10)).toString());}
                     if (ticks == 20) {
                         clearInterval(clock);
                     }
                 }, 50);
             });
 
-            $("#list").on("click", function () {
-                $("#matrix").prop("checked", false);
+            $(".js-list").on("click", function () {
+                $(".js-matrix").prop("checked", false);
                 var ticks = 0;
                 var clock = setInterval(function () {
                     ticks++;
-                    $(".matrixBook").css("opacity", (0.1 * (10-ticks)).toString());
-                    if (ticks == 10) {$(".matrixBook").addClass("listBook");}
-                    if (ticks > 10) {$(".matrixBook").css("opacity", (0.1 * (ticks-10)).toString());}
+                    $(".matrix-book").css("opacity", (0.1 * (10-ticks)).toString());
+                    if (ticks == 10) {$(".matrix-book").addClass("list-book");}
+                    if (ticks > 10) {$(".matrix-book").css("opacity", (0.1 * (ticks-10)).toString());}
                     if (ticks == 20) {
                         clearInterval(clock);
                     }

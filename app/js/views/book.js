@@ -11,10 +11,10 @@ define(function (require) {
 
     return Backbone.View.extend({
         events: {
-            'click .delete': 'deleteBook'
+            'click .js-delete': 'deleteBook'
         },
         tagName: "div",
-        className: "matrixBook",
+        className: "matrix-book",
 
         deleteBook: function () {
             //Delete model

@@ -29,11 +29,11 @@ define(function (require) {
             this.library.fetch();
             if (!this.libraryView) {
                 this.libraryView = new LibraryView({collection: this.library});
-                this.libraryView.$el.appendTo(".libraryContainer");
+                this.libraryView.$el.appendTo(".js-library-container");
                 this.library.reset();
             } else if (libraryLength < this.library.length) {
                 this.libraryView = new LibraryView({collection: this.library});
-                this.libraryView.$el.appendTo(".libraryContainer");
+                this.libraryView.$el.appendTo(".js-library-container");
             } else {
                 this.libraryView.show();
             }
@@ -62,13 +62,12 @@ define(function (require) {
                 this.bookView = new DetailedBookView({
                     model: bookModel
                 });
-                this.bookView.$el.appendTo(".bookDetailsContainer");
+                this.bookView.$el.appendTo(".js-book-container");
             } else {
-                this.bookView.model = bookModel; //ÍÅÎÆÈÄÀÍÍÎ!!!!!!     when set(attributes) the collection replace first element
+                this.bookView.model = bookModel;
                 this.bookView.show();
                 this.bookView.render();
             }
-
         },
 
         addNewBook: function () {
@@ -83,7 +82,7 @@ define(function (require) {
             if (!this.addNewBookView) {
                 this.addNewBookView = new AddNewBookView({collection: this.library});
                 this.addNewBookView.render();
-                this.addNewBookView.$el.appendTo(".addNewBookContainer");
+                this.addNewBookView.$el.appendTo(".js-add-container");
             } else {
                 this.addNewBookView.show();
             }

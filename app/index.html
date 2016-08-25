@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Backbone.js Library</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/screen.css" media="screen">
@@ -9,33 +11,35 @@
 </head>
 <body background="img/background.jpg">
 
-<h2 class="page_title">Backbone Open Source Library Project</h2>
+<h2 class="page-title">Backbone Open Source Library Project</h2>
 
 <div>
     <div>
-        <a href="/#add"><button class="add">Add new book</button></a>
+        <a href="/#add">
+            <button class="add-button">Add new book</button>
+        </a>
     </div>
 
-    <div class="switchers">
+    <div class="view-switchers">
         <form>
-            <input type="radio" id="matrix" checked>Matrix view
-            <input type="radio" id="list">List view
+            <input type="radio" class="js-matrix" checked>Matrix view
+            <input type="radio" class="js-list">List view
         </form>
     </div>
 </div>
 
-<div class="addNewBookContainer"></div>
-<div class="libraryContainer row"></div>
-<div class="bookDetailsContainer"></div>
+<div class="js-add-container"></div>
+<div class="library-container js-library-container"></div>
+<div class="js-book-container"></div>
 
 <script data-main="js/config" src="lib/node_modules/requirejs/require.js"></script>
 
-<div class="headBlock">
+<div class="header">
     <div>Free open source project</div>
     <div>Join us!</div>
 </div>
 
-<div class="footBlock">
+<div class="footer">
     Designed by yzhbankov
     <a href="https://github.com/yzhbankov/spa-boock-libraty">Git-Hub</a>
 </div>

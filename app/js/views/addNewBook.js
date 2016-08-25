@@ -8,11 +8,10 @@ define(function (require) {
     var _ = require('underscore');
     var addNewBookTemplate = require('text!views/template/addNewBookTemplate.html');
     var Book = require('models/book');
-    var Library = require('collections/library');
 
     return Backbone.View.extend({
         events: {
-            'click .addNewBook': 'addBook'
+            'click .js-add-book': 'addBook'
         },
 
         template: _.template(addNewBookTemplate),
@@ -21,14 +20,13 @@ define(function (require) {
             e.preventDefault();
             var formData = {};
 
-            $("#addBook div").children('input').each(function (i, el) {
+            $(".js-addBook div").children('input').each(function (i, el) {
                 if ($(el).val() !== "") {
                     formData[el.id] = $(el).val();
                 }
             });
             var newBook = new Book(formData);
             newBook.save();
-
         },
 
         hide: function () {
@@ -42,7 +40,6 @@ define(function (require) {
                     same.$el.hide();
                 }
             }, 50);
-
         },
         show: function () {
             var same = this;

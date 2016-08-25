@@ -15,7 +15,7 @@ define(function (require) {
             this.listenTo(this.model, "change", this.render);
             this.render();
         },
-        className: "detailedBook",
+        className: "book-details",
         template: _.template(bookDetailsTemplate),
         hide: function () {
             var same = this;
