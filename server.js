@@ -1,8 +1,8 @@
 /**
  * Created by Iaroslav Zhbankov on 26.07.2016.
  */
-var express = require('./app/lib/node_modules/express/index.js');
-var bodyParser = require('./app/lib/node_modules/body-parser/index.js');
+var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
 
 var books = [
@@ -44,16 +44,18 @@ var books = [
 
 var nextId = 4;
 
-app.use(express.static(__dirname + '/app'));
+app.use(express.static(__dirname));
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
     if(req.url.indexOf("/api") === 0 ||
-        req.url.indexOf("/bower-components") === 0 ||
-        req.url.indexOf("/scripts") === 0) {
+        req.url.indexOf("/node_modules") === 0 ||
+        req.url.indexOf("/css") === 0 ||
+        req.url.indexOf("/img") === 0 ||
+        req.url.indexOf("/js") === 0) {
         return next();
     }
 
-    res.sendFile(__dirname + '/app/index.html');
+    res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/api/books', function(req, res) {
