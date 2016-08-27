@@ -8,7 +8,28 @@ define(function (require) {
     var _ = require('underscore');
     var addNewBookTemplate = require('text!views/template/addNewBookTemplate.html');
     var Book = require('models/book');
-    var Library = require('collections/library');
+    var fieldTitles = {
+        title: 'Title',
+        author: 'Author',
+        releaseDate: 'Release Date',
+        description: "Description",
+        keywords: 'Keywords'
+    };
+
+    var fields = Object.keys(Book.prototype.defaults);
+
+
+    fields = fields.map(function(fieldName){
+            return {
+                id : _.uniqueId(fieldName + "___"),
+                title : fieldTitles[fieldName]
+            }
+    });
+
+    fields = fields.filter(function(field){
+        return field.title;
+    });
+
 
     return Backbone.View.extend({
         events: {
@@ -16,6 +37,12 @@ define(function (require) {
         },
 
         template: _.template(addNewBookTemplate),
+
+        // initialize: function () {
+        //
+        // },
+        //
+        //
 
         addBook: function (e) {
             e.preventDefault();
@@ -59,7 +86,9 @@ define(function (require) {
 
         render: function () {
 
-            this.$el.html(this.template());
+            this.$el.html(this.template({
+                fields : fields
+            }));
 
             return this;
         }
