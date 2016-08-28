@@ -1,5 +1,5 @@
 body {
-    margin: 40px 25% 6px 25%;
+    margin: 40px 5% 40px 5%;
     color: white;
 }
 
@@ -10,45 +10,14 @@ body {
 }
 
 .add-button {
-    width: 300px;
-    position: relative;
+    width: 100%;
     margin-bottom: 10px;
-    right: 150px;
-    margin-left: 50%;
     background: rgba(0, 0, 0, 0.5);
 }
 
 .view-switchers {
     color: white;
     padding-right: 100px;
-}
-
-.library-container {
-    background: rgba(0, 0, 0, 0.1);
-}
-
-
-.header {
-    background-color: black;
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    text-align: center;
-}
-
-.footer {
-    opacity: 0.8;
-    background-color: gray;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    text-align: center;
 }
 
 .books {
@@ -58,39 +27,21 @@ body {
     width: 100%;
 }
 
-.add-book-form label {
-    width: 200px;
-    padding-left: 100px;
-    float: left;
-}
-
 .add-book-form input {
-    float: left;
+    color: white;
     background: rgba(0, 0, 0, 0);
-    width: 300px;
     display: block;
     margin-bottom: 30px;
-    margin-left: 30px;
-}
-
-.add-book-form div:after {
-    content: "";
-    display: block;
-    height: 0;
-    visibility: hidden;
-    clear: both;
-    font-size: 0;
-    line-height: 0;
 }
 
 .add-container-title {
     margin: 20px;
     text-align: center;
-    color: white;
 }
 
 .back-library {
-    margin-left: 97%;
+    margin-top: 25px;
+    padding-right: 10px;
     font-size: 25px;
     font-weight: bold;
     line-height: 18px;
@@ -102,8 +53,7 @@ body {
 }
 
 .add-book {
-    width: 70%;
-    margin-left: 15%;
+    width: 100%;
     margin-bottom: 20px;
     background: rgba(0, 0, 0, 0.7);
 }
@@ -141,15 +91,14 @@ body {
     border-color: lightgrey;
     border-radius: 5px;
     width: 50%;
-    height: 220px;
-    margin-left: auto;
+    height: 200px;
     padding: 10px 15px 0px 0px;
     float: left;
 }
 
 .matrix-book img {
     float: left;
-    margin: 5px
+    margin-left: 10px;
 }
 
 .list-book {
@@ -158,26 +107,30 @@ body {
     border: solid 1px;
     border-color: lightgrey;
     border-radius: 5px;
-    width: 100%;
-    height: 220px;
-    margin-left: auto;
+    width: 70%;
+    height: 180px;
+    margin-left: 15%;
     float: left;
 }
 .list-book img {
-    margin: 5px
+    margin-left: 10px;
 }
 
 .book-details {
+
     background: rgba(0, 0, 0, 0.5);
     color: white;
     border: solid 1px;
     border-color: lightgrey;
     border-radius: 5px;
-    width: 100%;
+    height:250px;
+    width: 90%;
+    margin-left: 5%;
     float: left;
 }
 .book-details img {
-    margin: 0 10px 10px 10px;
+
+    margin: 20px 10px 10px 10px;
     float: left;
 }
 
@@ -193,23 +146,26 @@ a:hover {
     color: ghostwhite;
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 740px){
 
     body {
         margin: 40px 0 6px 0;
         color: white;
     }
+    .navbar-header {
+        display: none;
+    }
 
     .page-title {
         margin: 20px 0 20px 0;
+        font-size: 18px;
         text-align: center;
         color: white;
     }
 
     .add-button {
-        width: 90%;
-        right: 0;
-        margin-left: 5%;
+        width: 95%;
+        margin-left: 2.5%;
         margin-bottom: 10px;
         background: rgba(0, 0, 0, 0.5);
     }
@@ -218,74 +174,35 @@ a:hover {
        display: none;
     }
 
-    .library-container {
-        background: rgba(0, 0, 0, 0.1);
-    }
-
-
-    .header {
-        background-color: black;
-        color: white;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 40px;
-        text-align: center;
-    }
-
-    .footer {
-        opacity: 0.8;
-        background-color: gray;
-        color: white;
-        width: 100%;
-        height: 40px;
-        text-align: center;
-        margin-top: -40px
-    }
-
     .books {
         background: rgba(0, 0, 0, 0.5);
         color: white;
         border-radius: 5px;
-        width: 100%;
-    }
-
-    .add-book-form label {
-        width: 100%;
-        text-align: center;
-        padding-left: 0;
-        float: left;
-    }
-
-    .add-book-form input {
-        float: left;
-        background: rgba(0, 0, 0, 0);
         width: 95%;
-        display: block;
-        margin-bottom: 20px;
         margin-left: 2.5%;
     }
 
-    .add-book-form div:after {
-        content: "";
+    .add-book-form input {
+        width: 100%;
+        color: white;
+        background: rgba(0, 0, 0, 0);
         display: block;
-        height: 0;
-        visibility: hidden;
-        clear: both;
-        font-size: 0;
-        line-height: 0;
+
+    }
+    .add-book-form label {
+        width: 100%;
+        text-align: center;
     }
 
     .add-container-title {
-        margin: 5px 0 20px 0;
+        margin: 0 0 10px 0;
         text-align: center;
-        color: white;
-        font-size: x-large;
+        font-size: 17px;
     }
 
     .back-library {
-        margin-left: 94%;
+        margin-top: 5px;
+        padding-right: 15px;
         font-size: 25px;
         font-weight: bold;
         line-height: 18px;
@@ -297,10 +214,13 @@ a:hover {
     }
 
     .add-book {
-        width: 70%;
-        margin-left: 15%;
-        margin-bottom: 60px;
+        width: 100%;
+        margin-bottom: 20px;
         background: rgba(0, 0, 0, 0.7);
+    }
+
+    .book-headers {
+        font-weight: bold;
     }
 
     .delete {
@@ -331,32 +251,46 @@ a:hover {
         border: solid 1px;
         border-color: lightgrey;
         border-radius: 5px;
-        width: 100%;
-        height: 200px;
-        margin-left: auto;
-        padding: 10px 15px 0px 0px;
-        float: left;
+        width: 95%;
+        height: 180px;
+        margin-left: 2.5%;
     }
 
     .matrix-book img {
-        float: left;
-        margin: 5px;
-        height: 150px;
+        margin-top: 25px;
+        margin-left: 10px;
     }
 
-    .book-details {
+    .list-book {
         background: rgba(0, 0, 0, 0.5);
         color: white;
         border: solid 1px;
-        border-color: dodgerblue;
+        border-color: lightgrey;
         border-radius: 5px;
-        width: 100%;
+        width: 70%;
+        height: 180px;
+        margin-left: 15%;
+        float: left;
+    }
+    .list-book img {
+        margin-left: 10px;
+    }
+
+    .book-details {
+
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: solid 1px;
+        border-color: lightgrey;
+        border-radius: 5px;
+        height:100%;
+        width: 90%;
+        margin-left: 5%;
         float: left;
     }
     .book-details img {
-        margin: 0 10px 10px 10px;
+
+        margin: 20px 5px 10px 5px;
         float: left;
     }
-
-
 }

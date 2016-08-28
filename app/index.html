@@ -8,40 +8,78 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/screen.css">
 </head>
+
 <body background="img/background.jpg">
+<!--Page Title-->
+<div class="row">
+    <h2 class="page-title">Backbone Open Source Library Project</h2>
+</div>
 
-<h2 class="page-title">Backbone Open Source Library Project</h2>
-
-<div>
-    <div>
+<!--Add new book button-->
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
         <a href="/#add">
             <button type="button" class="add-button btn btn-info">Add new book</button>
         </a>
     </div>
+    <div class="col-md-4"></div>
+</div>
 
-    <div class="view-switchers">
+<!--Switchers-->
+<div class="view-switchers row">
+    <div class="col-md-6"></div>
+    <div class="col-md-4 text-right">
         <label class="radio-inline">
             <input type="radio" class="js-matrix" checked>Matrix view
         </label>
         <label class="radio-inline">
             <input type="radio" class="js-list">List view
         </label>
-
     </div>
 </div>
 
-<div class="js-add-container"></div>
-<div class="library-container js-library-container"></div>
-<div class="js-book-container"></div>
+<!--Add book field container-->
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="js-add-container row"></div>
+    </div>
+</div>
+
+<!--Library container-->
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="js-library-container row"></div>
+    </div>
+</div>
+
+<!--Detailed book container-->
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="js-book-container row"></div>
+    </div>
+</div>
+
 
 <script data-main="js/config" src="lib/node_modules/requirejs/require.js"></script>
 
-<div class="header">
-    <div>Free open source project</div>
-    <div>Join us!</div>
-</div>
-
-<div class="footer">
+<!--Header-->
+<nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="col-md-2">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Dr. Zhbankov</a>
+        </div>
+    </div>
+    <div class="col-md-8 col-xs-16 text-center">
+        <div>Free open source project</div>
+        <div>Join us!</div>
+    </div>
+</nav>
+<!--Footer-->
+<div class="navbar-inverse navbar-fixed-bottom text-center">
     Designed by yzhbankov
     <a href="https://github.com/yzhbankov/spa-boock-libraty">Git-Hub</a>
 </div>
