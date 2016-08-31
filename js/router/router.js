@@ -4,7 +4,7 @@
 
 define(function (require) {
     var Backbone = require('backbone');
-    var LibraryView = require('views/Library');
+    var LibraryView = require('views/library');
     var Library = require('collections/library');
     var DetailedBookView = require('views/detailedBook');
     var AddNewBookView = require('views/addNewBook');
@@ -25,6 +25,7 @@ define(function (require) {
 
         },
         goToLibrary: function () {
+            $(".js-add-button").show();
             var libraryLength = this.library.length;
             this.library.fetch();
             if (!this.libraryView) {
@@ -71,7 +72,6 @@ define(function (require) {
         },
 
         addNewBook: function () {
-
             if (this.libraryView) {
                 this.libraryView.hide();
             }
@@ -86,7 +86,7 @@ define(function (require) {
             } else {
                 this.addNewBookView.show();
             }
-
+            $(".js-add-button").hide();
         }
     });
 });

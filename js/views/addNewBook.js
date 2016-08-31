@@ -19,14 +19,39 @@ define(function (require) {
         addBook: function (e) {
             e.preventDefault();
             var formData = {};
+            var emptyFields = '';
 
             $(".js-addBook div").children('input').each(function (i, el) {
                 if ($(el).val() !== "") {
                     formData[el.id] = $(el).val();
+                } else {
+                    emptyFields += el.id + ", ";
                 }
             });
-            var newBook = new Book(formData);
-            newBook.save();
+
+            if (formData.author && formData.title && formData.keywords && formData.releaseDate && formData.description) {
+                var newBook = new Book(formData);
+                newBook.save();
+                $('.js-notification').append('<div class="alert alert-success">' +
+                    '<strong> Success!</strong>' + 'The book was add successfully!' +
+                    '</div>');
+                setTimeout(function () {
+                    $(".js-notification").empty();
+                }, 3000);
+
+                $(".js-addBook div").children('input').each(function (i, el) {
+                    el.value = '';
+                });
+
+            } else {
+                $('.js-notification').append('<div class="alert alert-warning">' +
+                    '<strong> Warning!</strong>' + 'You should enter <strong>' + emptyFields + '</strong> info' +
+                    '</div>');
+                setTimeout(function () {
+                    $(".js-notification").empty();
+                }, 3000);
+            }
+
         },
 
         hide: function () {

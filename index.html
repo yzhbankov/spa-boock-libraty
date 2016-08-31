@@ -11,16 +11,19 @@
 
 <body background="img/background.jpg">
 <!--Page Title-->
+<div class="container">
 <div class="row">
     <h2 class="page-title">Backbone Open Source Library Project</h2>
 </div>
 
+
 <!--Add new book button-->
+
 <div class="row">
     <div class="col-md-4 col-sm-4"></div>
     <div class="col-md-4 col-sm-4">
         <a href="/#add">
-            <button type="button" class="add-button btn btn-info">Add new book</button>
+            <button type="button" class="add-button js-add-button btn btn-info">Add new book</button>
         </a>
     </div>
     <div class="col-md-4 col-sm-4"></div>
@@ -51,8 +54,9 @@
 <div class="row">
     <div class="col-md-2 col-sm-1"></div>
     <div class="col-md-8 col-sm-10">
-        <div class="js-library-container row"></div>
+        <div class="js-library-container"></div>
     </div>
+    <div class="col-md-2 col-sm-1"></div>
 </div>
 
 <!--Detailed book container-->
@@ -62,7 +66,7 @@
         <div class="js-book-container row"></div>
     </div>
 </div>
-
+</div>
 
 <script data-main="js/config" src="node_modules/requirejs/require.js"></script>
 
@@ -73,7 +77,7 @@
             <a class="navbar-brand" href="#">Dr. Zhbankov</a>
         </div>
     </div>
-    <div class="col-md-8 col-xs-16 text-center">
+    <div class="col-md-8 col-xs-12 text-center">
         <div>Free open source project</div>
         <div>Join us!</div>
     </div>
