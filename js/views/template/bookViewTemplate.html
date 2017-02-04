@@ -1,0 +1,20 @@
+<div class="row">
+
+    <div class="col-md-4 col-xs-4">
+        <img class="img-responsive img-rounded" src="<%= coverImage %>"/>
+    </div>
+    <div class="col-md-8 col-xs-8">
+        <div class="row">
+            <div class="col-md-10 col-xs-10"></div>
+            <div class="col-md-2 col-xs-2"><a class="delete js-delete">x</a></div>
+        </div>
+
+        <div class="row">
+            <div><span class="book-headers">Title: </span> <a href="/#book/<%= id - 1 %>"><%= title %></a></div>
+            <div><span class="book-headers">Author: </span><%= author %></div>
+            <div><span class="book-headers">Release date: </span><%= releaseDate %></div>
+            <div><span class="book-headers">Keywords: </span><%= keywords %></div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,446 @@
+body {
+    margin: 40px 5% 40px 5%;
+    color: white;
+}
+
+.page-title {
+    margin: 20px;
+    text-align: center;
+    color: white;
+}
+
+.add-button {
+    width: 100%;
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.view-switchers {
+    color: white;
+    padding-right: 100px;
+}
+
+.books {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.add-book-form input {
+    color: white;
+    background: rgba(0, 0, 0, 0);
+    display: block;
+    margin-bottom: 30px;
+}
+
+.add-container-title {
+    margin: 20px;
+    text-align: center;
+}
+
+.back-library {
+    margin-top: 25px;
+    padding-right: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 18px;
+    color: white;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.8;
+    filter: alpha(opacity=20);
+    text-decoration: none;
+}
+
+.add-book {
+    width: 100%;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.book-headers {
+    font-weight: bold;
+}
+
+.delete {
+    font-size: 20px;
+    padding-left: 5px;
+    font-weight: bold;
+    line-height: 18px;
+    color: white;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.8;
+    filter: alpha(opacity=20);
+    text-decoration: none;
+    position: relative;
+    float: right;
+    bottom: 0;
+}
+
+.delete:hover {
+    color: #000000;
+    text-decoration: none;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    cursor: pointer;
+}
+.matrix-book {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: solid 1px;
+    border-color: lightgrey;
+    border-radius: 5px;
+    width: 50%;
+    height: 200px;
+    padding: 10px 15px 0px 0px;
+    float: left;
+}
+
+.matrix-book img {
+    float: left;
+    margin-left: 10px;
+}
+
+.list-book {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: solid 1px;
+    border-color: lightgrey;
+    border-radius: 5px;
+    width: 70%;
+    height: 180px;
+    margin-left: 15%;
+    float: left;
+}
+.list-book img {
+    margin-left: 10px;
+}
+
+.book-details {
+
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: solid 1px;
+    border-color: lightgrey;
+    border-radius: 5px;
+    height:250px;
+    width: 90%;
+    margin-left: 5%;
+    float: left;
+}
+.book-details img {
+
+    margin: 20px 10px 10px 10px;
+    float: left;
+}
+
+a:link {
+    color: lightgrey;
+}
+
+a:visited {
+    color: lightgrey;
+}
+
+a:hover {
+    color: ghostwhite;
+}
+
+@media screen and (max-width: 740px){
+
+    body {
+        margin: 40px 0 6px 0;
+        color: white;
+    }
+    .navbar-header {
+        display: none;
+    }
+
+    .page-title {
+        margin: 20px 0 20px 0;
+        font-size: 18px;
+        text-align: center;
+        color: white;
+    }
+
+    .add-button {
+        width: 95%;
+        margin-left: 2.5%;
+        margin-bottom: 10px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .view-switchers {
+       display: none;
+    }
+
+    .books {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border-radius: 5px;
+        width: 95%;
+        margin-left: 2.5%;
+    }
+
+    .add-book-form input {
+        width: 100%;
+        color: white;
+        background: rgba(0, 0, 0, 0);
+        display: block;
+
+    }
+    .add-book-form label {
+        width: 100%;
+        text-align: center;
+    }
+
+    .add-container-title {
+        margin: 0 0 10px 0;
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .back-library {
+        margin-top: 5px;
+        padding-right: 15px;
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 18px;
+        color: white;
+        text-shadow: 0 1px 0 #ffffff;
+        opacity: 0.8;
+        filter: alpha(opacity=20);
+        text-decoration: none;
+    }
+
+    .add-book {
+        width: 100%;
+        margin-bottom: 20px;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .book-headers {
+        font-weight: bold;
+    }
+
+    .delete {
+        font-size: 20px;
+        padding-left: 5px;
+        font-weight: bold;
+        line-height: 18px;
+        color: white;
+        text-shadow: 0 1px 0 #ffffff;
+        opacity: 0.8;
+        filter: alpha(opacity=20);
+        text-decoration: none;
+        position: relative;
+        float: right;
+        bottom: 0;
+    }
+
+    .delete:hover {
+        color: #000000;
+        text-decoration: none;
+        opacity: 0.4;
+        filter: alpha(opacity=40);
+        cursor: pointer;
+    }
+    .matrix-book {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: solid 1px;
+        border-color: lightgrey;
+        border-radius: 5px;
+        width: 95%;
+        height: 190px;
+        margin-left: 2.5%;
+    }
+
+    .matrix-book img {
+        margin-top: 25px;
+        margin-left: 10px;
+    }
+
+    .list-book {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: solid 1px;
+        border-color: lightgrey;
+        border-radius: 5px;
+        width: 70%;
+        height: 180px;
+        margin-left: 15%;
+        float: left;
+    }
+    .list-book img {
+        margin-left: 10px;
+    }
+
+    .book-details {
+
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: solid 1px;
+        border-color: lightgrey;
+        border-radius: 5px;
+        height:100%;
+        width: 90%;
+        margin-left: 5%;
+        float: left;
+    }
+    .book-details img {
+
+        margin: 20px 5px 10px 5px;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1025px){
+    body {
+        margin: 40px 0 6px 0;
+        color: white;
+    }
+
+    .navbar-header {
+        display: none;
+    }
+
+    .page-title {
+        margin: 20px 0 20px 0;
+        font-size: 18px;
+        text-align: center;
+        color: white;
+    }
+
+    .add-button {
+        width: 100%;
+        margin-bottom: 10px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .view-switchers {
+        display: none;
+    }
+
+    .books {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border-radius: 5px;
+        width: 95%;
+        margin-left: 2.5%;
+    }
+
+    .add-book-form input {
+        width: 100%;
+        color: white;
+        background: rgba(0, 0, 0, 0);
+        display: block;
+
+    }
+    /*
+    .add-book-form label {
+        width: 100%;
+    }
+
+    .add-container-title {
+        margin: 0 0 10px 0;
+        text-align: center;
+        font-size: 17px;
+    }
+    */
+
+    .back-library {
+        margin-top: 5px;
+        padding-right: 15px;
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 18px;
+        color: white;
+        text-shadow: 0 1px 0 #ffffff;
+        opacity: 0.8;
+        filter: alpha(opacity=20);
+        text-decoration: none;
+    }
+
+    .add-book {
+        width: 100%;
+        margin-bottom: 20px;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .book-headers {
+        font-weight: bold;
+    }
+
+    .delete {
+        font-size: 20px;
+        padding-left: 5px;
+        font-weight: bold;
+        line-height: 18px;
+        color: white;
+        text-shadow: 0 1px 0 #ffffff;
+        opacity: 0.8;
+        filter: alpha(opacity=20);
+        text-decoration: none;
+        position: relative;
+        float: right;
+        bottom: 0;
+    }
+
+    .delete:hover {
+        color: #000000;
+        text-decoration: none;
+        opacity: 0.4;
+        filter: alpha(opacity=40);
+        cursor: pointer;
+    }
+    .matrix-book {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: solid 1px;
+        border-color: lightgrey;
+        border-radius: 5px;
+        width: 50%;
+        height: 190px;
+
+    }
+
+    .matrix-book img {
+        margin-top: 25px;
+        margin-left: 10px;
+    }
+
+    .list-book {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: solid 1px;
+        border-color: lightgrey;
+        border-radius: 5px;
+        width: 70%;
+        height: 180px;
+        margin-left: 15%;
+        float: left;
+    }
+    .list-book img {
+        margin-left: 10px;
+    }
+
+    .book-details {
+
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: solid 1px;
+        border-color: lightgrey;
+        border-radius: 5px;
+        height:100%;
+        width: 90%;
+        margin-left: 5%;
+        float: left;
+    }
+    .book-details img {
+
+        margin: 20px 5px 10px 5px;
+        float: left;
+    }
+}
+
